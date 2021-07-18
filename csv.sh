@@ -46,7 +46,7 @@ parse_timew_data() {
 
 ## Parse the Json created from 'timew'
 convert_json_to_csv() {
-    jq -r '(.[0] | keys_unsorted) as $keys | $keys, map([.[ $keys[] ] | walk(if type == "array" then join(" ") else . end) ])[] | @csv' "${tmp_json}" > "${tmp_csv}"
+    jq -r '["id","start","end","tags","annotation"] as $keys | $keys, map([.[ $keys[] ] | walk(if type == "array" then join(" ") else . end) ])[] | @csv' "${tmp_json}" > "${tmp_csv}"
 }
 
 ## Format Report
