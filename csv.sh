@@ -4,7 +4,7 @@
 REPORT_PATH="${REPORT_PATH:-$HOME/.timewarrior/timew-reports/}"
 USER_NAME="${USER_NAME:-${USER}}"
 SEP="${SEP:-;}"
-XLSX_FILE="FALSE"
+XLSX_FILE="TRUE"
 
 ## Script Variables
 total_seconds=0
@@ -21,7 +21,7 @@ touch "${REPORT_PATH}"/"${tmp_file_name}"
 check_dependencies() {
     ## An array of dependencies
     depends=("timew" "jq")
-    [[ "${XLSX_FILE}" == "TRUE" ]] && depends+="soffice"
+    [[ "${XLSX_FILE}" == "TRUE" ]] && depends+=("soffice")
     ## Iterate through to verify that they are executable
     for dep in "${depends[@]}"; do
         if ! command -v "${dep}" >/dev/null 2>&1 ; then

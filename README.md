@@ -4,7 +4,7 @@ This bash script works as an [extension](https://timewarrior.net/docs/api/) to t
 ### Requirements/Dependencies
  - `timew`
  - `jq`
- - `soffice` (LibreOffice)
+ - `soffice` (LibreOffice - only required if `XLSX_FILE="TRUE"`)
 
 ### Usage
 1. Install timewarrior (go [here](https://timewarrior.net/docs/install/) for distro-specific options).
