@@ -15,7 +15,7 @@ This bash script works as an [extension](https://timewarrior.net/docs/api/) to t
 ### Variables
 |Variable|Description|Default|
 |---|---|---|
-|`REPORT_PATH`| The location to store the report created | $HOME/timew-reports/ |
+|`REPORT_PATH`| The location to store the report created | $HOME/.timewarrior/timew-reports/ |
 |`USER_NAME`| The name prefixing the report | $USER|
 |`SEP`| The separator used in the CSV | ";"|
 |`XLSX_FILE`| Creates an additional .xlsx file | "TRUE"|
