@@ -1,0 +1,12 @@
+## 0.0.1 2021-12-09 <grey8knights at gmail dot com>
+
+   ### Added
+      - Option to create additional .xlsx file from csv
+
+   ### Changed
+      - Changed report directory
+      - Fixed report naming to label with first date in csv
+      - Altered durations formatting from hh:mm:ss to h m s
+      - Fixed empty remarks column if first entry lacked annotation
+
+
