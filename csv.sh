@@ -15,7 +15,7 @@ tmp_csv=$(mktemp)
 ## Create weekly log file
 mkdir -p "${REPORT_PATH}"
 [[ -e "${REPORT_PATH}"/"${tmp_file_name}" ]] && rm "${REPORT_PATH}"/"${tmp_file_name}"
-touch "${REPORT_PATH}"/"${tmp_file_name}"
+touch "${REPORT_PATH}"/"${tmp_file_name}" 
 
 ## Dependencies
 check_dependencies() {
@@ -102,14 +102,14 @@ convert_secs() {
     ((h=${1}/3600))
     ((m=(${1}%3600)/60))
     ((s=${1}%60))
-    echo "${h}h ${m}m ${s}s"
+    echo "${h}h ${m}m"
 
     ## Alternative method?
     ###echo "${1}" | awk '{printf "%02dh %02dm %02ds", $1/3600, ($1/60)%60, $1%60}'
 }
 
 update_file_name() {
-    report_name="${USER_NAME}-$( head "${tmp_file_name}" -n2 | tail -n1 | cut -d';' -f 4 )-log.csv"
+    report_name="${USER_NAME}-$( head "${REPORT_PATH}/${tmp_file_name}" -n2 | tail -n1 | cut -d';' -f 4 )-log.csv"
     mv "${REPORT_PATH}"/"${tmp_file_name}" "${REPORT_PATH}"/"${report_name}"
 }
 
