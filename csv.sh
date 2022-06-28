@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ## ENV Variables & Defaults
-REPORT_PATH="${REPORT_PATH:-$HOME/.timewarrior/timew-reports/}"
+REPORT_PATH="${REPORT_PATH:-$HOME/.timewarrior/timew-reports}"
 USER_NAME="${USER_NAME:-${USER}}"
 SEP="${SEP:-;}"
-XLSX_FILE="TRUE"
+XLSX_FILE="FALSE"
 
 ## Script Variables
 total_seconds=0
