@@ -4,7 +4,7 @@
 REPORT_PATH="${REPORT_PATH:-$HOME/.timewarrior/timew-reports}"
 USER_NAME="${USER_NAME:-${USER}}"
 SEP="${SEP:-;}"
-XLSX_FILE="FALSE"
+XLSX_FILE="${XLSX_FILE:-FALSE}"
 
 ## Script Variables
 total_seconds=0
